@@ -254,7 +254,8 @@
                         }
                     </style>
                     <h4 class="text-white mb-4">Drop a Review</h4>
-                    <form action="#" class="row">
+                    <form action="{{ route('review.store') }}" method="POST" class="row">
+                        @csrf
                         <div class="col-md-6 col-12">
                             <div class="form-group mb-4">
                                 <input type="text" name="name" class="form-control" placeholder="Full Name*">
@@ -267,7 +268,7 @@
                         </div>
                         <div class="col-md-12 col-12">
                             <div class="form-group mb-4">
-                                <input type="url" class="form-control" placeholder="Web Site(Optional)">
+                                <input type="url" class="form-control" name="website" placeholder="Web Site(Optional)">
                             </div>
                         </div>
                         <div class="form-group mb-4">
