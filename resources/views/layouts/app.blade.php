@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
 
+  @toastr_css
 </head>
 
 <body id="top-header">
@@ -70,5 +71,7 @@
       });
     </script>
 
+    @toastr_js
+    @toastr_render
   </body>
   </html>
