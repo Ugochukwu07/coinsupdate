@@ -3157,23 +3157,23 @@
         },
         {
             "name": "php-flasher/flasher",
-            "version": "v1.6.2",
-            "version_normalized": "1.6.2.0",
+            "version": "v1.6.3",
+            "version_normalized": "1.6.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-flasher/flasher.git",
-                "reference": "10d686e629d511145ef13a71b7e7342595e9a01b"
+                "reference": "9d223ac99b6a33de4eaa16d17fab4a1490dfef28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-flasher/flasher/zipball/10d686e629d511145ef13a71b7e7342595e9a01b",
-                "reference": "10d686e629d511145ef13a71b7e7342595e9a01b",
+                "url": "https://api.github.com/repos/php-flasher/flasher/zipball/9d223ac99b6a33de4eaa16d17fab4a1490dfef28",
+                "reference": "9d223ac99b6a33de4eaa16d17fab4a1490dfef28",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3"
             },
-            "time": "2022-06-12T14:00:21+00:00",
+            "time": "2022-06-17T01:48:40+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -3214,7 +3214,7 @@
             ],
             "support": {
                 "issues": "https://github.com/php-flasher/flasher/issues",
-                "source": "https://github.com/php-flasher/flasher/tree/v1.6.2"
+                "source": "https://github.com/php-flasher/flasher/tree/v1.6.3"
             },
             "funding": [
                 {
@@ -3238,17 +3238,17 @@
         },
         {
             "name": "php-flasher/flasher-laravel",
-            "version": "v1.6.2",
-            "version_normalized": "1.6.2.0",
+            "version": "v1.6.3",
+            "version_normalized": "1.6.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-flasher/flasher-laravel.git",
-                "reference": "ad62e9690563bfd5698bd19d48c7a75d69ae828d"
+                "reference": "cd14e9ff060dcbcaeed0824fec4c59fe3fb18f8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-flasher/flasher-laravel/zipball/ad62e9690563bfd5698bd19d48c7a75d69ae828d",
-                "reference": "ad62e9690563bfd5698bd19d48c7a75d69ae828d",
+                "url": "https://api.github.com/repos/php-flasher/flasher-laravel/zipball/cd14e9ff060dcbcaeed0824fec4c59fe3fb18f8d",
+                "reference": "cd14e9ff060dcbcaeed0824fec4c59fe3fb18f8d",
                 "shasum": ""
             },
             "require": {
@@ -3256,7 +3256,7 @@
                 "php": ">=5.3",
                 "php-flasher/flasher": "^1.6"
             },
-            "time": "2022-06-11T13:46:17+00:00",
+            "time": "2022-06-17T01:48:40+00:00",
             "type": "library",
             "extra": {
                 "laravel": {
@@ -3309,7 +3309,7 @@
             ],
             "support": {
                 "issues": "https://github.com/php-flasher/flasher-laravel/issues",
-                "source": "https://github.com/php-flasher/flasher-laravel/tree/v1.6.2"
+                "source": "https://github.com/php-flasher/flasher-laravel/tree/v1.6.3"
             },
             "funding": [
                 {
@@ -3333,8 +3333,8 @@
         },
         {
             "name": "php-flasher/flasher-toastr",
-            "version": "v1.6.2",
-            "version_normalized": "1.6.2.0",
+            "version": "v1.6.3",
+            "version_normalized": "1.6.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-flasher/flasher-toastr.git",
@@ -3386,7 +3386,7 @@
             ],
             "support": {
                 "issues": "https://github.com/php-flasher/flasher-toastr/issues",
-                "source": "https://github.com/php-flasher/flasher-toastr/tree/v1.6.2"
+                "source": "https://github.com/php-flasher/flasher-toastr/tree/v1.6.3"
             },
             "funding": [
                 {
