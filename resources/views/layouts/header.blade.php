@@ -37,10 +37,10 @@
     
                         <div class="header-btn border-left-0 ms-5 d-none d-xl-block">
                             <ul class="header-socials-2 list-inline">
-                                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                                <li class="list-inline-item"><a href="{{ config('main.site.social.facebbok') }}"><i class="fa-brands fa-facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="{{ config('main.site.social.twitter') }}"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li class="list-inline-item"><a href="{{ config('main.site.social.linkedin') }}"><i class="fa-brands fa-linkedin"></i></a></li>
+                                <li class="list-inline-item"><a href="{{ config('main.site.social.telegram') }}"><i class="fa-brands fa-telegram"></i></a></li>
                             </ul>
                         </div>
                     </div>

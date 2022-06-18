@@ -1,5 +1,20 @@
 @extends('layouts.app', ['title' => 'Welcome'])
 
+@section('css')
+    <style>
+        .loading-p{
+            position: relative;
+        }
+        .loading{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgb(13, 67, 182, 52%);
+        }
+    </style>
+@endsection
 @section('content')
     <!-- Banner Section Start -->
 <section class="banner-style-5">
@@ -8,7 +23,7 @@
             <div class="col-md-12 col-xl-6 col-lg-6 ">
                 <div class="banner-content">
                     <span class="subheading"><i class="fa fa-arrow-alt-circle-down"></i>50% discount on early purchase</span>
-                    <h1>Solve your daily life problem in 1 minute</h1>
+                    <h1>Millionaires Are Created in Bear Market</h1>
                     <p>Sometimes it's the only thing you do. But it's always the ONE Thing that delivers extraordinary results</p>
                     <a href="#" class="btn btn-white"><i class="fa-solid fa-cart-arrow-down"></i>Get the book Now</a>
                 </div>
@@ -196,12 +211,13 @@
 
             <div class="col-xl-6 col-lg-6 col-md-6">
                 <div class="subcribe-form">
-                    <h4 class="text-white mb-4">Get a free chapter of this book</h4>
-                    <form action="#">
+                    <h4 class="text-white mb-4">Be part of our Pre-Sale Group</h4>
+                    <form action="{{ route('presale.add.store') }}" method="POST">
+                        @csrf
                         <div class="form-group mb-4">
-                            <input type="text" class="form-control" placeholder="Email Address">
+                            <input type="text" name="email" class="form-control" placeholder="Email Address">
                         </div>
-                        <a href="#" class="btn btn-main" target="_blank">Get one Free Chapter</a>
+                        <input class="btn btn-main" type="submit" value="Add to Pre-Sale Group" />
                     </form>
                 </div>
             </div>
@@ -222,7 +238,7 @@
             </div>
         </div>
         <div class="row align-items-center justify-content-center">
-            <div class="col-lg-9 col-xl-9">
+            <div class="col-lg-9 col-xl-9 mx-auto">
                 <div class="testimonials-slides-5 owl-carousel owl-theme">
                     <div class="testimonial-item">
                        <div class="testimonial-inner">
@@ -243,10 +259,13 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row align-items-center justify-content-center">
             <div class="col-lg-10 mx-auto text-center" id="review-btn">
                 <a href="#chapters" class="btn btn-dark">Drop a Review</a>
             </div>
-            <div class="col-xl-10 col-lg-10 col-md-10 text-center mx-auto wow fadeInDown" id="review-form" style="display: none">
+            <div class="col-xl-10 col-lg-10 col-md-10 m-0 loading-p text-center mx-auto wow fadeInDown" id="review-form" style="display: none">
+                <div class="loading"></div>
                 <div class="subcribe-form p-5" style="background: rgb(13,67,182)">
                     <style>
                         textarea.form-control {
@@ -521,4 +540,14 @@
 </section>
 <!-- CTA Sidebar end -->
 
+@endsection
+
+@section('script')
+<script>
+    $('#review-btn').on('click', function(e){
+      e.preventDefault()
+      $('#review-btn').css("display", "none");
+      $('#review-form').css("display", "block");
+    });
+  </script>
 @endsection

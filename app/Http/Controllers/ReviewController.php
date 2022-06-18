@@ -21,7 +21,7 @@ class ReviewController extends Controller
 
         if($validator->fails()){
             //toastr
-            toastr()->error($validator->errors()->toArray()->first());
+            toastr($validator->errors()->first(), 'error', 'Something Went Wroung');
 
             $backUrl = URL::previous() . "#reviews";
             return redirect($backUrl);

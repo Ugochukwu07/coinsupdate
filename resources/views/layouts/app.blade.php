@@ -30,7 +30,14 @@
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
 
-  @toastr_css
+  @yield('css')
+  
+    <!-- Main jQuery -->
+    <script src="{{ asset('js/jquery.js') }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    new WOW().init();
+  </script>
 </head>
 
 <body id="top-header">
@@ -46,8 +53,6 @@
     Essential Scripts
     =====================================-->
     
-    <!-- Main jQuery -->
-    <script src="{{ asset('js/jquery.js') }}"></script>
     <!-- Bootstrap 5:0 -->
     <script src="{{ asset('js/popper.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>
@@ -56,22 +61,9 @@
     <script src="{{ asset('js/jquery.counterup.min.js') }}"></script>
     <!--  Owl Carousel -->
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    
+    <script src="{{ asset('js/script.js') }}"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/wow.min.js"></script>
-              <script>
-              new WOW().init();
-              </script>
-
-    <script>
-      $('#review-btn').on('click', function(e){
-        e.preventDefault()
-        $('#review-btn').css("display", "none");
-        $('#review-form').css("display", "block");
-      });
-    </script>
-
-    @toastr_js
-    @toastr_render
+    @yield('script')
   </body>
   </html>
