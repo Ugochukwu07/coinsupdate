@@ -3,8 +3,10 @@
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="site-logo col-xl-3 col-3 col-lg-3">
-                    <a href="index.html">
-                        <img src="assets/images/logo-white.png" alt="" class="img-fluid" />
+                    <a href="{{ route('index') }}">
+                        <div class="widget footer-widget mb-5 mb-xl-0">				
+                            <h2 class="font-lg fw-400">CoinsUpdate.</h2>
+                        </div>
                     </a>
                 </div>
 

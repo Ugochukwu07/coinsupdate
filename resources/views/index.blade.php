@@ -2,16 +2,14 @@
 
 @section('css')
     <style>
-        .loading-p{
-            position: relative;
+        .cta-6 {
+            background: url({{ asset('img/cta-bg.jpg') }}) fixed 50% 50%;
         }
-        .loading{
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: rgb(13, 67, 182, 52%);
+        .counter-section {
+            background: url({{ asset('img/footer-bg.png') }});
+        }
+        .subcribe-form textarea.form-control {
+            height: auto !important;
         }
     </style>
 @endsection
@@ -25,7 +23,7 @@
                     <span class="subheading"><i class="fa fa-arrow-alt-circle-down"></i>50% discount on early purchase</span>
                     <h1>Millionaires Are Created in Bear Market</h1>
                     <p>Sometimes it's the only thing you do. But it's always the ONE Thing that delivers extraordinary results</p>
-                    <a href="#" class="btn btn-white"><i class="fa-solid fa-cart-arrow-down"></i>Get the book Now</a>
+                    <a href="{{ route('getbook') }}" class="btn btn-white"><i class="fa-solid fa-cart-arrow-down"></i>Get the book Now</a>
                 </div>
             </div>
 
@@ -85,6 +83,7 @@
     </div>
 </section>
 <!-- Clients logo Section End -->
+
 <!-- About Section Start -->
 <section class="about-wrapper section-padding" id="about"> 
     <div class="container">
@@ -123,6 +122,101 @@
                     </ul>
 
                     <a href="#chapters" class="btn btn-dark">Discover More</a>  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Section END -->
+
+<!--  Feature Intro Start -->
+<section class="features-intro section-padding" id="about">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-6">
+                <div class="section-heading text-center mb-70">
+                    <h2 class="font-lg mb-20">Who this book for</h2>
+                    <p>This book is concerned with creating typography and is essential for professionals who regularly work for clients.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="feature-item feature-style-left mb-5 mb-lg-0">
+                    <div class="feature-icon icon-bg-1">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Entrepreneurs</h4>
+                        <p>Lorem ipsum dolor seat ameat dui too consecteture</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="feature-item feature-style-left mb-5 mb-lg-0">
+                    <div class="feature-icon icon-bg-2">
+                        <i class="fa fa-certificate"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Project Managers</h4>
+                        <p>Lorem ipsum dolor seat ameat dui too consecteture</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-4 ">
+                <div class="feature-item feature-style-left">
+                    <div class="feature-icon icon-bg-3">
+                        <i class="fa fa-video"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Students</h4>
+                        <p>Lorem ipsum dolor seat ameat dui too consecteture</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--  Feature Intro End -->
+
+<!-- About Section Start -->
+<section class="about-section section-padding-btm" >
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-6 pe-5">
+                <div class="about-img">
+                    <img src="{{ asset('img/about-bg.jpg') }}" alt="" class="img-fluid">
+                    <div class="rating">
+                        <h2>4.9 <span>(300 reviews)</span></h2>
+                        <p>Average rating we have got from users</p>
+                    </div>
+               </div>
+            </div>
+
+            <div class="col-xl-5 col-lg-5">
+                <div class="about-content mt-4 mt-xl-0">
+                    <span class="subheading">10 years Glory of success</span>
+                    <h3 class="font-lg mb-30"> Everything in your hand using mobile or tablet </h3>
+                
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-sm-6">
+                            <div class="count-item">
+                                <h4> <span class="counter">24</span>+</h4>
+                                <p>Award we have got from different organization </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-sm-6">
+                            <div class="count-item">
+                                <h4> <span class="counter">97</span>%</h4>
+                                <p>Satisfaction rates comes from awesome users</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#chapters" class="btn btn-main-outline">Discover More</a>  
                 </div>
             </div>
         </div>
@@ -198,6 +292,7 @@
     </div>
 </section>
 <!-- Feature Section END -->
+
 <!-- CTA Sidebar start -->
 <section class="cta-6">
     <div class="container">
@@ -211,13 +306,13 @@
 
             <div class="col-xl-6 col-lg-6 col-md-6">
                 <div class="subcribe-form">
-                    <h4 class="text-white mb-4">Be part of our Pre-Sale Group</h4>
-                    <form action="{{ route('presale.add.store') }}" method="POST">
+                    <h4 class="text-white mb-4">Be part of our Newsletter</h4>
+                    <form action="{{ route('newsletter.add.store') }}" method="POST">
                         @csrf
                         <div class="form-group mb-4">
                             <input type="text" name="email" class="form-control" placeholder="Email Address">
                         </div>
-                        <input class="btn btn-main" type="submit" value="Add to Pre-Sale Group" />
+                        <input class="btn btn-main" type="submit" value="Add to Newsletter" />
                     </form>
                 </div>
             </div>
@@ -264,14 +359,9 @@
             <div class="col-lg-10 mx-auto text-center" id="review-btn">
                 <a href="#chapters" class="btn btn-dark">Drop a Review</a>
             </div>
-            <div class="col-xl-10 col-lg-10 col-md-10 m-0 loading-p text-center mx-auto wow fadeInDown" id="review-form" style="display: none">
-                <div class="loading"></div>
+            <div class="col-xl-10 col-lg-10 col-md-10 m-0 text-center mx-auto wow fadeInDown" id="review-form" style="display: none">
+                
                 <div class="subcribe-form p-5" style="background: rgb(13,67,182)">
-                    <style>
-                        textarea.form-control {
-                            height: auto !important;
-                        }
-                    </style>
                     <h4 class="text-white mb-4">Drop a Review</h4>
                     <form action="{{ route('review.store') }}" method="POST" class="row">
                         @csrf
@@ -303,6 +393,7 @@
     </div>
 </section>
 <!-- Testimonial section End -->
+
 <section class="author-section section-padding bg-grey2" id="author"> 
     <div class="container">
         <div class="row align-items-center justify-content-center">
@@ -349,8 +440,9 @@
         </div>
     </div>
 </section>
+
 <!-- Counter Section start -->
-<section class="counter-section">
+<section class="counter-section" style="backgroud: black">
     <div class="container">
         <div class="row justify-content-center g-0" >
             <div class="col-lg-3 col-sm-6">
@@ -398,91 +490,44 @@
 <!-- COunter Section End -->
 
 <!-- Pricing start -->
-
 <section class="pricing section-padding" id="pricing">
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-xl-6">
                 <div class="heading text-center mb-70">
-                    <span class="subheading sub-style-2">pricing plan</span>
-                    <h2 class="font-lg">Flexible Pricing plan</h2>
+                    <span class="subheading sub-style-2">pricing</span>
+                    <h2 class="font-lg">Flexible Pricing</h2>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-xl-4">
-                <div class="pricing-item pricing-style-2 mb-4 mb-lg-0">
-                    <div class="pricing-header">
-                        <span class="badge">Free Version</span>
-                        <p>Get Chapter One</p>
-                    </div>
-                    <div class="price">
-                        <h2>Free</h2>
-                    </div>
-
-                    <div class="pricing-features mb-30">
-                        <ul>
-                            <li> <i class="lni lni-checkmark"></i>1 Free Chapter</li>
-                            <li><i class="lni lni-checkmark"></i> PDF version</li>
-                            <li><i class="lni lni-checkmark"></i> Free Subscripion</li>
-                            <li class="not-included"> <i class="lni lni-checkmark"></i>hardcover </li>
-                        </ul>
-                    </div>
-
-                    <a href="#" class="btn btn-black">Get it Now</a>
-                    <p class="mb-0 mt-3 font-sm-14">* No Hidden Charge and Fees</p>
-
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-xl-4">
+            <div class="col-lg-4 col-md-6 mx-auto col-xl-4">
                 <div class="pricing-item featured pricing-style-2 mb-4 mb-lg-0">
                     <div class="pricing-header">
-                        <span class="badge">Hard Copy</span>
-                        <p>Get eBook version Free</p>
+                        <span class="badge">eBook Version</span>
+                        <p>Get eBook version Now</p>
                     </div>
                     <div class="price">
-                        <h2><span class="currency">$</span>29.99</h2>
+                        <h2><span class="currency">NGN</span>10,000</h2>
                         
                     </div>
                     <div class="pricing-features mb-30">
                         <ul>
                             <li><i class="lni lni-checkmark"></i>Ebook Version</li>
                             <li><i class="lni lni-checkmark"></i> PDF version</li>
-                            <li><i class="lni lni-checkmark"></i> hardcover</li>
-                            <li class="not-included"><i class="lni lni-checkmark"></i> Audio Book</li>
+                            <li><i class="lni lni-checkmark"></i> Private Telegram Channel</li>
+                            <li class="not-included"><i class="lni lni-checkmark"></i> Pre Sale Bonus</li>
                         </ul>
                     </div>
-                    <a href="#" class="btn btn-black">Get it Now</a>
-                    <p class="mb-0 mt-3 font-sm-14">* No Hidden Charge and Fees</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-xl-4">
-                <div class="pricing-item pricing-style-2">
-                    <div class="pricing-header">
-                        <span class="badge">eBook version</span>
-                        <p>Pdf &amp; Audio Book Added</p>
-                    </div>
-                    <div class="price">
-                        <h2><span class="currency">$</span>39.99 </h2>
-                    </div>
-                    <div class="pricing-features mb-30">
-                        <ul>
-                            <li><i class="lni lni-checkmark"></i> Ebook Version</li>
-                            <li><i class="lni lni-checkmark"></i> Audio Book</li>
-                            <li><i class="lni lni-checkmark"></i> PDF version</li>
-                            <li><i class="lni lni-checkmark"></i> hardcover </li>
-                        </ul>
-                    </div>
-                    <a href="#" class="btn btn-black">Get it Now</a>
+                    <a href="{{ route('getbook') }}" class="btn btn-black">Get it Now</a>
                     <p class="mb-0 mt-3 font-sm-14">* No Hidden Charge and Fees</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <!-- Faq Section Start -->
 <section class="faq section-padding-btm" id="faq">
     <div class="container">
@@ -531,7 +576,7 @@
             <div class="col-xl-4 col-lg-4">
                 <div class="download-btn">
                     <p>Available Now :</p>
-                    <a href="#" class="btn btn-white d-block mb-2"><i class="fa-solid fa-cart-shopping me-2"></i>Purchase Now</a>
+                    <a href="{{ route('getbook') }}" class="btn btn-white d-block mb-2"><i class="fa-solid fa-cart-shopping me-2"></i>Purchase Now</a>
                     <a href="#" class="btn btn-black d-block"><i class="fa-brands fa-amazon me-2"></i>Get It on Amazon</a>
                 </div>
             </div>
