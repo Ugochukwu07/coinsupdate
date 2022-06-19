@@ -144,6 +144,7 @@ class ComposerStaticInit976eaf1a158be7aa9fc5112bff6688fe
         'F' => 
         array (
             'Fruitcake\\Cors\\' => 15,
+            'Flutterwave\\' => 12,
             'Flasher\\Toastr\\Prime\\' => 21,
             'Flasher\\Prime\\' => 14,
             'Flasher\\Laravel\\' => 16,
@@ -454,6 +455,10 @@ class ComposerStaticInit976eaf1a158be7aa9fc5112bff6688fe
         array (
             0 => __DIR__ . '/..' . '/fruitcake/php-cors/src',
         ),
+        'Flutterwave\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/flutterwavedev/flutterwave-v3/library/Rave',
+        ),
         'Flasher\\Toastr\\Prime\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-flasher/flasher-toastr',
@@ -545,6 +550,13 @@ class ComposerStaticInit976eaf1a158be7aa9fc5112bff6688fe
     );
 
     public static $prefixesPsr0 = array (
+        'U' => 
+        array (
+            'Unirest\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/mashape/unirest-php/src',
+            ),
+        ),
         'M' => 
         array (
             'Mockery' => 
@@ -561,6 +573,8 @@ class ComposerStaticInit976eaf1a158be7aa9fc5112bff6688fe
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\NewsletterController' => __DIR__ . '/../..' . '/app/Http/Controllers/NewsletterController.php',
         'App\\Http\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/Http/Controllers/PagesController.php',
+        'App\\Http\\Controllers\\PaymentController' => __DIR__ . '/../..' . '/app/Http/Controllers/PaymentController.php',
+        'App\\Http\\Controllers\\Payment\\EventHandlerController' => __DIR__ . '/../..' . '/app/Http/Controllers/Payment/EventHandlerController.php',
         'App\\Http\\Controllers\\ReviewController' => __DIR__ . '/../..' . '/app/Http/Controllers/ReviewController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -572,6 +586,7 @@ class ComposerStaticInit976eaf1a158be7aa9fc5112bff6688fe
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Listeners\\NewReviewListener' => __DIR__ . '/../..' . '/app/Listeners/NewReviewListener.php',
+        'App\\Models\\Buyers' => __DIR__ . '/../..' . '/app/Models/Buyers.php',
         'App\\Models\\Review' => __DIR__ . '/../..' . '/app/Models/Review.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Notifications\\NewReviewForAdminNotification' => __DIR__ . '/../..' . '/app/Notifications/NewReviewForAdminNotification.php',
@@ -6024,6 +6039,11 @@ class ComposerStaticInit976eaf1a158be7aa9fc5112bff6688fe
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
+        'Unirest\\Exception' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Exception.php',
+        'Unirest\\Method' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Method.php',
+        'Unirest\\Request' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Request.php',
+        'Unirest\\Request\\Body' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Request/Body.php',
+        'Unirest\\Response' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Response.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Webmozart\\Assert\\InvalidArgumentException' => __DIR__ . '/..' . '/webmozart/assert/src/InvalidArgumentException.php',

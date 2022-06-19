@@ -72,6 +72,7 @@ return array(
     'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
     'GrahamCampbell\\ResultType\\' => array($vendorDir . '/graham-campbell/result-type/src'),
     'Fruitcake\\Cors\\' => array($vendorDir . '/fruitcake/php-cors/src'),
+    'Flutterwave\\' => array($vendorDir . '/flutterwavedev/flutterwave-v3/library/Rave'),
     'Flasher\\Toastr\\Prime\\' => array($vendorDir . '/php-flasher/flasher-toastr'),
     'Flasher\\Prime\\' => array($vendorDir . '/php-flasher/flasher'),
     'Flasher\\Laravel\\' => array($vendorDir . '/php-flasher/flasher-laravel'),
